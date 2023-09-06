@@ -1120,6 +1120,8 @@ a.button {
   animation: none;
 }
 
+
+  /* Change button background color on hover */
 a.button:hover {
   background-color: navy;
 }
