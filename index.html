@@ -383,7 +383,7 @@
             </div>
           </div>
         </div>
-
+        <a href="forms\Ernest Samuel_May2023_Resume.pdf" download class="button">Download Resume</a>
       </div>
     </section><!-- End Resume Section -->
 
@@ -789,5 +789,14 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+<script>
+  // JavaScript to add the "clicked" class when the button is clicked
+  document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('.button');
+    button.addEventListener('click', function () {
+      this.classList.add('clicked');
+    });
+  });
+</script>
 
 </html>
