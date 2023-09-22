@@ -37,9 +37,8 @@ function sendMail() {
     var message = document.getElementById("message").value;
     var subject = document.getElementById("subject").value;
   
-    const serviceID = "service_u5tgmhq";
-    const templateID = "template_l1z4t6g";
   
+    // Success and Error message response
     const successMessage = "Your message was sent successfully.";
     const errorMessage = "Message not sent. Kindly send us an email.";
     const missingEmailMessage = "Message Not sent: Add email";
@@ -63,6 +62,9 @@ function sendMail() {
         return; // Don't proceed with sending the message
       }
   
+// ----------------------- Emailjs Requirments code -----------------------------
+    const serviceID = "service_u5tgmhq";
+    const templateID = "template_l1z4t6g";
     var param = {
       name: name,
       email: email,
@@ -93,5 +95,3 @@ function sendMail() {
       });
   }
   
-
-
