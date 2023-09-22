@@ -49,6 +49,7 @@
     });
   });
 
+  // usin php script 
   function php_email_form_submit(thisForm, action, formData) {
     fetch(action, {
       method: 'POST',
@@ -75,6 +76,36 @@
       displayError(thisForm, error);
     });
   }
+
+  // my script for Emailjs
+  function sendMail(){
+    var param = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+        subject: document.getElementById("subject").value,
+    };
+
+    const serviceID = "service_u5tgmhq";
+    const templateID = "template_l1z4t6g";
+
+    emailjs
+        .send(serviceID, templateID, param)
+        .then((resp) =>{
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+                document.getElementById("subject").value= "";
+
+                console.log(resp);
+                alert("your message sent successfully");
+                displayError("Message sent successfully");
+            })
+        .catch((erro)=>{
+            console.log(erro);
+            displayError("Message Not successfully, Kindly send us an Email");
+        })
+}
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
