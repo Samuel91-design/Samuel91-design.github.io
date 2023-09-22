@@ -42,8 +42,8 @@ function sendMail() {
   
     const successMessage = "Your message was sent successfully.";
     const errorMessage = "Message not sent. Kindly send us an email.";
-    const missingEmailMessage = "Add email";
-    const missingNameMessage = "Add Name";
+    const missingEmailMessage = "Message Not sent: Add email";
+    const missingNameMessage = "Message Not sent: Add Name";
   
     const messageContainer = document.getElementById("message-container");
   
